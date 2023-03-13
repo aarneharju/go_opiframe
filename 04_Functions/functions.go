@@ -34,6 +34,16 @@ func sum(vals ...int) int {
 	return total
 }
 
+// Closures
+
+func sequence() func() int { // sequence function returns function that returns int
+	i := 0
+	return func() int {
+		i++
+		return i
+	}
+}
+
 func main() {
 	c := add(20, 10)
 	d := subtract(20,10)
@@ -52,4 +62,17 @@ func main() {
 	t := []int{1,2,3,4,5,6,7,8,9}
 	fmt.Println("Add together these numbers", t)
 	fmt.Printf("Sum is %d\n", sum(t...))
+
+	nextInt := sequence()
+	fmt.Println("Ints in sequence")
+	fmt.Println(nextInt())
+	fmt.Println(nextInt())
+	fmt.Println(nextInt())
+	
+	moreInts := sequence()
+	fmt.Println("New sequence")
+	fmt.Println(moreInts())
+	fmt.Println(moreInts())
+	fmt.Println(moreInts())
+
 }
