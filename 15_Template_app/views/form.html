@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact List</title>
+</head>
+
+<body>
+    <ul style="list-style-type: none; margin: auto">
+        <li><a href="/">Contact List</a></li>
+        <li><a href="/form">Add new contact</a></li>
+    </ul>
+    <hr />
+    <h3>{{.FormName}}</h3>
+    <form action="/" method="POST">
+        <label>First name</label>
+        <input type="text" name="firstname" />
+        <label>Last name</label>
+        <input type="text" name="lastname" />
+        <label>Email</label>
+        <input type="email" name="email" />
+        <label>Phone</label>
+        <input type="text" name="phone" />
+        <label>Address</label>
+        <input type="text" name="address" />
+        <label>City</label>
+        <input type="text" name="city" />
+        <input type="submit" name="Add" />
+    </form>
+</body>
+
+</html>

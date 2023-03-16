@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact List</title>
+</head>
+
+<body>
+    <ul style="list-style-type: none; margin: auto">
+        <li><a href="/">Contact List</a></li>
+        <li><a href="/form">Add new contact</a></li>
+    </ul>
+    <hr />
+    <table>
+        <thead>
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{range .Contacts}}
+            <tr>
+                <td><a href="/contact/{{.Id}}">{{.FirstName}}</a></td>
+                <td><a href="/contact/{{.Id}}">{{.LastName}}</a></td>
+                <td><a href="/contact/{{.Id}}">{{.Email}}</a></td>
+                <td><a href="/contact/{{.Id}}">{{.Phone}}</a></td>
+                <td><a href="/contact/{{.Id}}">{{.Address}}</a></td>
+                <td><a href="/contact/{{.Id}}">{{.City}}</a></td>
+            </tr>
+            {{end}}
+        </tbody>
+    </table>
+</body>
+
+</html>
